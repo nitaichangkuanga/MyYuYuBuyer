@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_md_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ll_mainshop_h"
+        android:background="@color/colorMainTitle"
+        >
+        <RelativeLayout
+            android:id="@+id/rl_md_back"
+            android:layout_width="@dimen/click_login_top"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginLeft="@dimen/tv_shop_marleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back_selector"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="动态列表"
+            android:textSize="@dimen/tv_shop_name"
+            android:textColor="@color/colorMain"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageButton
+            android:id="@+id/ib_myDynamic_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_add"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/tv_shop_marleft"
+            />
+        <ImageView
+            android:layout_toLeftOf="@id/ib_myDynamic_add"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/et_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/delete"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_md_emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="暂无数据(点我刷新)"
+        android:textColor="@color/colordistance"
+        android:visibility="gone"
+        android:textSize="18sp" />
+
+    <com.wushuikeji.www.yuyubuyer.view.CircularProgress
+        android:id="@+id/pb_md_progressBar"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:borderWidth="5dp"
+        />
+    <include
+        layout="@layout/common_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_md_rl"
+        />
+
+</RelativeLayout>
